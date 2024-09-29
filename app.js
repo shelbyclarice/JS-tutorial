@@ -46,10 +46,10 @@ else {
 
 
 // Nesting - nest conditionals inside conditionals
-let password = "cat dog";
-if (password.length >= 6) {
+let passcode = "cat dog";
+if (passcode.length >= 6) {
     // if space is not equal to -1, means there are no spaces
-    if (password.indexOf(' ') !== -1) {
+    if (passcode.indexOf(' ') !== -1) {
         console.log("Password is long enough but cannot include spaces");
     }
     else {
@@ -120,7 +120,7 @@ else {
 }
 
 // Another Example
-let color = "";
+let colorType = "";
 if(color === 'purple' || color === 'lilac' || color === 'violet') {
     console.log('Great Choice');
 }
@@ -209,3 +209,13 @@ switch (emoji) {
         console.log('red');
         break;
 }
+
+
+// Ternary Operator - taking an if and else and turning into a single line of code
+// 3 pieces - condition ? expIfTrue: expIfFalse
+// Only works with a yes no type of statment
+let number = 7;
+number === 7 ? console.log('lucky') : console.log('BAD');
+
+let status = 'offline';
+let color = status === 'offline' ? 'red' : 'green';
