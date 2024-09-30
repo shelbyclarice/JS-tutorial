@@ -184,7 +184,7 @@ const colorTypes = [
 ];
 colorTypes[0][1][1] // "maroon"
 
-
+ 
 
 
 
