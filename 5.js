@@ -62,3 +62,64 @@ const animals = [ 'lions', 'tigers', 'bears' ];
 for (let i = 0; i < animals.length; i++) {
     console.log(i, animals[i]);
 } // 0 'lions' // 1 'tigers' // 2 'bears'
+
+const examScore = [ 98, 77, 84, 91, 57, 66 ];
+for(let i = 0; i <= examScores.length; i++ { // Stops at 5
+    console.log(i, examScores[i]);
+}
+
+const myStudents = [
+    {
+        firstName: 'Zeus',
+        grade: 86
+    },
+    {
+        firstName: 'Artemis',
+        grade: 97
+    },
+    {
+        firstName: 'Hera',
+        grade: 72
+    },
+    {
+        firstName: 'Apollo',
+        grade: 90
+    }
+];
+for(let i = 0; i < myStudents.length; i++) {
+    let student = myStudents[i];
+    console.log(`${student.firstName} scored ${student.grade}`);
+
+    // Finding the average grade scores by adding all and divide by 4
+let total = 0;
+for (let i = 0; i < myStudents.length; i++) {
+    let student = myStudents[i];
+    total += student.grade;
+}
+console.log(total / myStudents.length);
+
+/*
+    // Types out stressed backwards but has each letter on seperate line
+    const word = 'stressed';
+    for(let i = word.length -1; i >= 0; i--) { // i-- will subtract 1
+        console.log(word[i]);
+    }
+*/
+        // Will have backwards stressed on the same line
+        const word = 'stressed';
+        let reversedWord = ""
+        for(let i = word.length -1; i >= 0; i--) { // i-- will subtract 1
+            reversedWord +- word[i];
+        }
+        console.log(reversedWord);
+}
+
+
+// Nested Loops
+let str = 'LOL';
+for (let i = 0; i <= 4; i++) {
+    console.log("Outer:", i);
+        for (let j = 0; j < str.length; j++) {
+            console.log(' Inner:', str[j]);
+        }
+}
