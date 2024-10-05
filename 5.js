@@ -123,3 +123,38 @@ for(let sub of subreddits){ // sub = sub elements
 for (let char of 'cockadoodledoo'){ // char = character
     console.log(char.toUpperCase());
 }
+
+// 2D Array
+const magicSquare = [
+    [ 2, ,7 ,6 ],
+    [ 9, 5, 1 ],
+    [4, 3, 8 ]
+];
+
+// For Loop
+for(let i = 0; i < magicSquare.length; i++){
+    let row = magicSquare[i];
+    for(let j = 0; j < row.length; j++) {
+        console.log(row[j]); // Will start over at 0 for each row when collecting the sum
+        sum += row[j];
+    }
+    console.log(`${row} summed to ${sum}`);
+} // Gets sum number of each row
+
+// For of Loop - code looks more clean used to advantage
+for(let row of magicSquare){
+    let sum = 0;
+    for(let num of row){
+        sum += num;
+    }
+    console.log(`${row} summed to ${sum}`);
+}
+
+// Example of when its better to use a for loop than an for up - because we need to know which index were accessing
+const words1 = [ 'mail', 'milk', 'bath', 'black' ];
+const words2 = [ 'box', 'shake', 'tub', 'berry' ];
+
+// For Loop
+for(let i = 0; i < words1.length; i++){
+    console.log(`${words1[i]}${words2[i]}`);
+} // mailbox // milkshake // bathtub // blackberry
