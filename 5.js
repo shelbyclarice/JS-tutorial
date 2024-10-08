@@ -158,3 +158,66 @@ const words2 = [ 'box', 'shake', 'tub', 'berry' ];
 for(let i = 0; i < words1.length; i++){
     console.log(`${words1[i]}${words2[i]}`);
 } // mailbox // milkshake // bathtub // blackberry
+
+// Looping or iterating over objects
+const movieReviews = {
+    Arrival : 9.5,
+    Alien : 9,
+    Amelie : 8,
+    'In Bruges' : 9,
+    Amadeus : 10,
+    'Kill Bill' : 8,
+    'Little miss Sunshine' : 8.5,
+    Coraline : 7.5
+};
+
+Object.keys(movieReviews) // [Movies]
+Object.values(movieReviews) // [Rating numbers]
+
+// For of - isolating the values
+for (let movie of Object.keys(movieReviews)) {
+    console.log(movie); // Each movie on there own line
+}
+
+for (let movie of Object.keys(movieReviews)) {
+    console.log(movie, movieReviews[movie]); // Each movie  and rating on there own line
+}
+
+const rating = Object.values(movieReviews);
+let total = 0;
+for(let r of ratings){
+    total += r;
+}
+let avg = total/ratings.length; // Total is equal to total divided by rating style length
+console.log(avg);
+
+// For in = loop over the keys in an object (Order not set in stone)
+// Objects = can loop the keys of an object, using Object.keys()
+for (variable in object) {
+    statment
+}
+
+const jeopardyWinnings = {
+    regularPlay : 2522700,
+    watsonChallenge : 300000,
+    tournamentOfChampions : 500000,
+    balleOfTheDecades : 100000
+};
+
+// for in wants an object, if use for of then get an error
+for(let prop in jeopardyWinning) {
+    console.log(prop); // prints out the names
+    console.log(jeopardyWinnings[prop]); // prints out the numbers 
+}
+
+// Total earnings
+let total = 0;
+for (let prop in jeopardyWinnings) {
+    total += jeopardyWinnings[prop];
+}
+console.log(`Ken Jennings Total Earnings: ${total}`); 
+
+// Array - not useful for for in loops compared to for of loops
+for(let k in [88,99,77,66]){
+    console.log(k); // 0 // 1 // 2 // 3
+}
