@@ -166,3 +166,42 @@ const product = function multiply(x,y) {
 }
 product(3,5) // 15
 multiply(3,5) // Not Defined
+
+
+// Functions are objects
+function add(x, y) {
+    return x + y;
+}
+
+const subtract = function (x, y) {
+    return x - y;
+}
+
+function multiply(x, y) {
+    return x * y;
+}
+
+const divide = function (x, y) {
+    return x / y;
+}
+// array
+const operations = [add, subtract, multiply, divide];
+
+operations[1] // (x, y) { return x - y; }
+operations[1](100,4) // 96
+operations[2](100,4) // 400
+
+// Run 4 functions with this loop
+for(let func of operations) {
+    let result = func(30,5);
+    console.log(result); // 35 // 25 // 150 // 6
+}
+
+// Adding a function to an object, we have a method
+const thing = {
+    doSomething: multiply
+}
+thing.doSomething(50,2) // 100
+
+
+// Higher Order Functions
